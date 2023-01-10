@@ -16,9 +16,10 @@ public class DepartmentController {
 
     @PostMapping("/save")
     public Department saveDepartment(@RequestBody Department department){
-        log.info("saved department, details -> {}",department);
+        log.info("saved department, details -> {} department",department.getDepartmentName());
         return departmentService.saveDepartment(department);
     }
+
     @GetMapping("/getDepartment/{deptId}")
     public Department findDepartmentById(@PathVariable("deptId") Long deptId){
         log.info("logging department id : {}",deptId);
