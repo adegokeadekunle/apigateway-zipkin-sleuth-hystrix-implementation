@@ -7,13 +7,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="department_service" />
         <module name="users-service" />
+        <module name="departments-servie" />
         <module name="service-registry" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="department_service" target="11" />
+      <module name="departments-servie" target="11" />
       <module name="service-registry" target="11" />
       <module name="service_registry" target="17" />
       <module name="user-service" target="11" />
@@ -24,6 +25,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="department_service" options="-parameters" />
+      <module name="departments-servie" options="-parameters" />
       <module name="service-registry" options="-parameters" />
       <module name="service_registry" options="-parameters" />
       <module name="user-service" options="-parameters" />
