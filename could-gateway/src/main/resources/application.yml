@@ -5,17 +5,49 @@ server:
 spring:
   application:
     name: API-GATEWAY
+#    creating a dynamic routes for all the services
   cloud:
     gateway:
       routes:
+#        adding user service to the route
         - id: USERS-SERVICE
           uri: lb://USERS-SERVICE
           predicates:
+#           adding the request mapping and exposing all the endpoints with the wildcard/**
             - Path=/users/**
+          filters:
+#           adding filters  to handle fallback in case where a service is down. this will call the fallback controller for each service
+            - name: CircuitBreaker
+              args:
+                name: USERS-SERVICE
+#             the uri to be called for the fall back
+                fallbackuri: forwards:/userServiceFallback
         - id: DEPARTMENT-SERVICE
           uri: lb://DEPARTMENT-SERVICE
           predicates:
             - Path=/departments/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: DEPARTMENT-SERVICE
+                fallbackuri: forwards:/departmentServiceFallback
+
+
+#adding the hystrix configuration for the circuitBreaker  if response is not gotten
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+
+#adding configuration for the actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
 
 eureka:
   client:
@@ -25,3 +57,5 @@ eureka:
       defaultZone : http://localhost:8761/eureka/
   instance :
     hostname : localhost
+
+
