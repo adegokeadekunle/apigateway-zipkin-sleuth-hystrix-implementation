@@ -7,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/department")
+@RequestMapping("/departments")
 @RequiredArgsConstructor
 @Slf4j
 public class DepartmentController {

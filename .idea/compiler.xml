@@ -10,9 +10,11 @@
         <module name="users-service" />
         <module name="departments-servie" />
         <module name="service-registry" />
+        <module name="could-gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="could-gateway" target="11" />
       <module name="department_service" target="11" />
       <module name="departments-servie" target="11" />
       <module name="service-registry" target="11" />
@@ -24,6 +26,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="could-gateway" options="-parameters" />
       <module name="department_service" options="-parameters" />
       <module name="departments-servie" options="-parameters" />
       <module name="service-registry" options="-parameters" />

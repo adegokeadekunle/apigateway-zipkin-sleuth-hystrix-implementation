@@ -36,7 +36,7 @@ public class UserServiceImpl implements UserService{
 
         Department department = restTemplate
                // .getForObject("http://localhost:8080/department/getDepartment/"+user.getDepartmentId(),Department.class); hard coding the url
-        .getForObject("http://DEPARTMENT-SERVICE/department/getDepartment/"+user.getDepartmentId(),Department.class); // using service registry to dynamically create the department service url
+        .getForObject("http://DEPARTMENT-SERVICE/departments/getDepartment/"+user.getDepartmentId(),Department.class); // using service registry to dynamically create the department service url
 
         userDto.setUser(user);
         userDto.setDepartment(department);
