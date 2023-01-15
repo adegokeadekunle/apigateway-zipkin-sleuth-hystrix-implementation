@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/could-config-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/could-config-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/could-gateway/could-config-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/could-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/department_service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/department_service/users-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/departments-servie/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hystrix_dashboard/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-registry/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-registry/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user-service/src/main/java" charset="UTF-8" />

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/could-config-server/could-config-server.iml" filepath="$PROJECT_DIR$/could-config-server/could-config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/could-gateway/could-gateway.iml" filepath="$PROJECT_DIR$/could-gateway/could-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/departments-servie/departments-servie.iml" filepath="$PROJECT_DIR$/departments-servie/departments-servie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hystrix_dashboard/hystrix_dashboard.iml" filepath="$PROJECT_DIR$/hystrix_dashboard/hystrix_dashboard.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-registry/service-registry.iml" filepath="$PROJECT_DIR$/service-registry/service-registry.iml" />
       <module fileurl="file://$PROJECT_DIR$/users-service/users-service.iml" filepath="$PROJECT_DIR$/users-service/users-service.iml" />
     </modules>

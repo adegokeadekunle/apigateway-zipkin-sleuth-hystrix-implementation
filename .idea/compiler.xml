@@ -7,16 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="could-config-server" />
         <module name="users-service" />
+        <module name="hystrix_dashboard" />
         <module name="departments-servie" />
         <module name="service-registry" />
         <module name="could-gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="could-config-server" target="11" />
       <module name="could-gateway" target="11" />
       <module name="department_service" target="11" />
       <module name="departments-servie" target="11" />
+      <module name="hystrix_dashboard" target="11" />
       <module name="service-registry" target="11" />
       <module name="service_registry" target="17" />
       <module name="user-service" target="11" />
@@ -26,9 +30,11 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="could-config-server" options="-parameters" />
       <module name="could-gateway" options="-parameters" />
       <module name="department_service" options="-parameters" />
       <module name="departments-servie" options="-parameters" />
+      <module name="hystrix_dashboard" options="-parameters" />
       <module name="service-registry" options="-parameters" />
       <module name="service_registry" options="-parameters" />
       <module name="user-service" options="-parameters" />
